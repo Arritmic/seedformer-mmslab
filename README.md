@@ -1,4 +1,7 @@
-# SeedFormer: Patch Seeds based Point Cloud Completion with Upsample Transformer
+# SeedFormer-MMSLab
+## Repository based on the original implementation:  *SeedFormer: Patch Seeds based Point Cloud Completion with Upsample Transformer*
+
+
 
 ![example](./pictures/teaser.png)
 

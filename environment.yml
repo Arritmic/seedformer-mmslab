@@ -1,0 +1,28 @@
+# environment.yml for SeedFormer project
+# After installing, and activate --> export CUDA_HOME=/home/arritmic/anaconda3/envs/SeedFormer
+name: SeedFormer
+channels:
+  - conda-forge
+  - pytorch
+dependencies:
+  - python=3.6.8
+  - pip
+  - cudatoolkit=11.7  # Specify the version of CUDA compatible with your GPU
+  - cudatoolkit-dev=11.7
+  - pip:
+      - numpy
+      - easydict
+      - opencv-python
+      - -f https://download.pytorch.org/whl/cu117
+      - --extra-index-url=https://download.pytorch.org/whl/cu117
+      - open3d
+      - torch
+      - torchvision
+      - torchaudio
+      - imutils
+      - matplotlib
+      - tensorboard
+      - tqdm
+      - h5py
+      - scipy
+      - transforms3d
