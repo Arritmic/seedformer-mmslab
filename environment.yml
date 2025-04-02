@@ -1,25 +1,26 @@
 # environment.yml for SeedFormer project
 # After installing, and activate --> export CUDA_HOME=/home/arritmic/anaconda3/envs/SeedFormer
+# sudo apt install gcc-$MAX_GCC_VERSION g++-$MAX_GCC_VERSION  ---> cuda 11.7 - GCC11 max
+# sudo ln -s /usr/bin/gcc-$MAX_GCC_VERSION /home/arritmic/anaconda3/envs/SeedFormer/bin/gcc
+# sudo ln -s /usr/bin/g++-$MAX_GCC_VERSION /home/arritmic/anaconda3/envs/SeedFormer/bin/g++
 name: SeedFormer
 channels:
   - conda-forge
-  - pytorch
+  - nvidia
 dependencies:
-  - python=3.6.8
+  - python=3.10
   - pip
   - cudatoolkit=11.7  # Specify the version of CUDA compatible with your GPU
   - cudatoolkit-dev=11.7
   - pip:
-      - numpy
-      - easydict
+      - numpy==1.26.4
+      - torch==2.0.1
+      - torchvision==0.15.2
+      - --extra-index-url https://download.pytorch.org/whl/cu117
       - opencv-python
-      - -f https://download.pytorch.org/whl/cu117
-      - --extra-index-url=https://download.pytorch.org/whl/cu117
-      - open3d
-      - torch
-      - torchvision
-      - torchaudio
       - imutils
+      - open3d
+      - easydict
       - matplotlib
       - tensorboard
       - tqdm

@@ -42,6 +42,14 @@ Compile the C++ extension modules:
 
     sh install.sh
 
+For the compilation, link against the proper GCC compiler version supported by your CUDA version. Follow the next instructions: 
+https://stackoverflow.com/questions/6622454/cuda-incompatible-with-my-gcc-version
+
+Use the path to your environment:
+
+    sudo ln -s /usr/bin/gcc-$MAX_GCC_VERSION /home/arritmic/anaconda3/envs/SeedFormer/bin/gcc
+    sudo ln -s /usr/bin/g++-$MAX_GCC_VERSION /home/arritmic/anaconda3/envs/SeedFormer/bin/g++
+
 ## Datasets
 
 The details of used datasets can be found in [DATASET.md](./DATASET.md) (we thank the authors of PoinTr).
