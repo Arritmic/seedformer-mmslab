@@ -137,9 +137,6 @@ class Manager:
 
             model.train()
 
-            # Update learning rate
-            self.lr_scheduler.step()
-
             # total cds
             total_cd_pc = 0
             total_cd_p1 = 0
@@ -187,6 +184,9 @@ class Manager:
             avg_cd2 = total_cd_p2 / n_batches
             avg_cd3 = total_cd_p3 / n_batches
             avg_partial = total_partial / n_batches
+
+            # Update learning rate
+            self.lr_scheduler.step()
 
             epoch_end_time = time.time()
 
